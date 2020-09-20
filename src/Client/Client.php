@@ -191,7 +191,7 @@ EOT;
     }
 
 
-    protected function reset()
+    public function reset()
     {
         $this->connected = false;
         foreach ($this->getTimers() as $timer) {

@@ -65,8 +65,6 @@ Execute the following command to create it.
 $ spiked init --dir=/home/conf --format=json
 ```
 
-Yaml,Xml,Ini and Json(default) files are supported. Use the following command for help.
-
 
 ```bash
 $ spiked init -h

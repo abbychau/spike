@@ -63,7 +63,7 @@ $ spiked --address=127.0.0.1:8088
 $ spiked init --dir=/home/conf --format=json
 ```
 
-支持yaml,xml,ini,json四种格式的配置文件，默认使用json，使用下面命令查看帮助
+支持json 配置文件，默认使用json，使用下面命令查看帮助
 
 ```bash
 $ spiked init -h

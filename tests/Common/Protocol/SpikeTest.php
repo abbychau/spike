@@ -64,10 +64,10 @@ class SpikeTest extends TestCase
             'foo' => 'bar',
             'bar' => 'baz'
         ]);
-        $this->assertNotContains('Global', $message->toString());
-        $this->assertNotContains('Global', $message->toString());
+        $this->assertStringNotContainsString('Global', $message->toString());
+        $this->assertStringNotContainsString('Global', $message->toString());
         Spike::setGlobalHeader('Global', 'foo');
-        $this->assertContains('Global', $message->toString());
-        $this->assertContains('Global', $message2->toString());
+        $this->assertStringContainsString('Global', $message->toString());
+        $this->assertStringContainsString('Global', $message2->toString());
     }
 }

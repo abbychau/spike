@@ -8,7 +8,7 @@ class TestCase extends BaseTestCase
 {
     use TimersAware;
 
-    public function setUp()
+    public function setUp(): void
     {
         foreach ($this->getTimers() as $timer) {
             $this->cancelTimer($timer);

@@ -21,6 +21,6 @@ class ShowProxyHostsCommandTest extends TestCase
         $command = new ShowProxyHostsCommand($this->getClientStub());
         $commandTester = new CommandTester($command);
         $commandTester->execute([]);
-        $this->assertContains('Proxy Host', $commandTester->getDisplay());
+        $this->assertStringContainsString('Proxy Host', $commandTester->getDisplay());
     }
 }

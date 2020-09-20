@@ -23,7 +23,7 @@ class TestCase extends BaseTestCase
      */
     protected $loop;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->loop && $this->loop->stop();
         $this->loop =  null;

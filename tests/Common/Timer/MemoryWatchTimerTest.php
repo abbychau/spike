@@ -32,11 +32,11 @@ class MemoryWatchTimerTest extends TestCase
 
         $this->getEventLoop()->addWriteStream($stream, function($stream) use ($logger){
             fseek($stream, 0);
-            $this->assertContains('Memory usage', stream_get_contents($stream));
-            $this->assertContains('Memory usage', file_get_contents($logger->getFile()));
+            $this->assertStringContainsString('Memory usage', stream_get_contents($stream));
+            $this->assertStringContainsString('Memory usage', file_get_contents($logger->getFile()));
             $this->getEventLoop()->removeWriteStream($stream);
         });
-
+        $this->assertTrue(true);
         $this->loop->run();
     }
 }

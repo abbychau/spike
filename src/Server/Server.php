@@ -313,7 +313,6 @@ EOT;
     {
         $definition = parent::getDefaultInputDefinition();
         $definition->addOptions([
-            new InputOption('config', 'c', InputOption::VALUE_OPTIONAL, 'The configuration file, support json,ini,xml and yaml format'),
             new InputOption('address', 'a', InputOption::VALUE_REQUIRED, 'The server address'),
         ]);
 

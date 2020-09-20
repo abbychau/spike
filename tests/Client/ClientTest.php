@@ -7,6 +7,10 @@ use Spike\Tests\TestCase;
 
 class ClientTest extends TestCase
 {
+    protected function setUp(): void
+    {
+
+    }
     public function testGetter()
     {
         $client = $this->getClientStub();

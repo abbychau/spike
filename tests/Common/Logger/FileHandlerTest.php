@@ -20,6 +20,6 @@ class FileHandlerTest extends TestCase
             $this->assertEquals('foobarbaz', stream_get_contents($stream));
             $this->getEventLoop()->removeWriteStream($stream);
         });
-        @unlink($file);
+        $this->assertEquals(unlink($file),true);
     }
 }

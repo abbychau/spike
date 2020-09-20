@@ -25,12 +25,18 @@ class MemoryWatchTimer implements TimerInterface
         $this->logger = $logger;
     }
 
+    private static function convert($size)
+    {
+        $unit=array('Bytes','KB','MB','GB','TB','PB');
+        return round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
+    }
+
     /**
      * {@inheritdoc}
      */
     public function __invoke()
     {
-        $this->logger->info(sprintf('Memory usage: %s', memory_get_usage()));
+        $this->logger->info(sprintf('Memory usage: %s', $this::convert(memory_get_usage())));
     }
 
     /**

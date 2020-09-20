@@ -10,7 +10,7 @@ class ConfigurationTest extends TestCase
     {
         $configuration = new Configuration();
         $this->assertEquals('0.0.0.0:8090', $configuration->getAddress());
-        $this->assertContains('spiked.json', $configuration->getDefaultConfigFile());
+        $this->assertStringContainsString('spiked.json', $configuration->getDefaultConfigFile());
         $this->assertNull($configuration->getAuthentication());
     }
 

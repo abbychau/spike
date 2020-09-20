@@ -34,6 +34,6 @@ class SummaryWatchTimerTest extends TestCase
             $this->getEventLoop()->stop();
         }));
         $this->getEventLoop()->run();
-        $this->assertContains('Client Total: 0', file_get_contents($logger->getFile()));
+        $this->assertStringContainsString('Client Total: 0', file_get_contents($logger->getFile()));
     }
 }
